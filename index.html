@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Title -->
+    <title>Clean Curves</title>
+
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="css/cssIndex.css" rel="stylesheet">
+
+    <!-- For Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+</head>
+
+<!-- Body -->
+<body>
+    <!-- Navigation -->
+    <section class="header">
+        <nav>
+            <a href="index.html"> <img src="img/logoOnly.png" alt="Logo"></a>
+            <div class="nav-links" id="navLinks">
+			<p></p>
+                 <!--icon for smaller devices / opened navigation-->
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html" class="current">Home</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                    <li><a href="Education.html">Products</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <!--icon for smaller devices / opened navigation-->
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <!--Navigation Ends-->
+        <!--Content-->
+        <div class="text-box">
+            <h1>Clean Curves.</h1>
+            <a href="#content" class="start-btn"><i class="fas fa-angle-down"></i></a>
+        </div>
+        <!--Content End-->
+
+    </section>
+
+    <section id="content" class="content">
+        <div class="intro">
+            <h1>Who are Clean Curves?</h1>
+            <p>Assalamualaikum and Hi. <a href="Contact.html">contact</a> information as a way for you to reach me.</p>
+        </div>
+
+       
+    </section>
+       <!-- Start Footer -->
+    <footer class="footer">
+        <div class="foot-container">
+            <small class="copyright pull-left">Copyrights © 2023 All Rights Reserved By <a href="https://www.instagram.com/clean.curves">CleanCurves</a>.</small>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Back to top -->
+    <a href="javascript:" id="return-to-top"><i class="fas fa-chevron-up"></i></a>
+    <!-- /Back to top -->
+
+    
+<!--JS toggle-->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script>
+    $(window).scroll(function(){
+        if ($(this).scrollTop() >=20){
+            $('#return-to-top').fadeIn(200);
+        }else{
+            $('#return-to-top').fadeOut(200);
+        }
+    });
+    $('#return-to-top').click(function(){
+        $('body,html').animate({
+            scrollTop : 0
+        },0);
+    });
+    </script>
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right="0";
+    }
+    function hideMenu(){
+        navLinks.style.right="-200px";
+    }
+
+</script>
+</body>
+</html>
